@@ -15,6 +15,6 @@ git seed clone / git seed pull
 component install
 
 
-node_modules/vital/bin/vital 
+node_modules/vital/bin/vital -f example
 
 ```
