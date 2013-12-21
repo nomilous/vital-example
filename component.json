@@ -1,0 +1,12 @@
+{
+  "name": "vital-example",
+  "repo": "nomilous/vital-example",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "nomilous/ubuntu-net-dev": "*"
+  },
+  "development": {},
+  "license": "MIT"
+}
