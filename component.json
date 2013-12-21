@@ -5,7 +5,9 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "nomilous/ubuntu-net-dev": "*"
+    "nomilous/ubuntu-net-dev": "*",
+    "nomilous/ubuntu-net-tcp": "*",
+    "nomilous/ubuntu-net-udp": "*"
   },
   "development": {},
   "license": "MIT"
