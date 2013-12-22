@@ -10,8 +10,8 @@ before:
         tag 
 
             nics: require 'vital-linux-net-nics'
-            tcp:  require 'vital-linux-net-tcp'
-            udp:  require 'vital-linux-net-udp'
+            tcp:  -> # require 'vital-linux-net-tcp'
+            udp:  -> # require 'vital-linux-net-udp'
 
 
     # each: -> console.log '\nbeforeEach'
