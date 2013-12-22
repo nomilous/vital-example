@@ -1,11 +1,6 @@
 
-// components required as node modules
+'some free text': function() {
 
-// console.log( require('ubuntu-net-dev') );
-// console.log( require('ubuntu-net-tcp') );
-// console.log( require('ubuntu-net-udp') );
+    console.log( {run: 'function'} );
 
-net = require('ubuntu-net-dev');
-
-console.log( net() == 'okgood' );
-
+}
