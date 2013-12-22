@@ -1,17 +1,27 @@
 before: {
     all: function() {
-        console.log('\nbeforeAll\n');
+        
+        tag({
+
+            nics: require('vital-linux-net-dev'),
+            tcp:  require('vital-linux-net-tcp'), 
+            udp:  require('vital-linux-net-udp')
+
+        });
+
     },
     each: function() {
         console.log('\nbeforeEach');
     },
 },
 
-'some free text': function() {
-    net = require('ubuntu-net-dev');
-    return net();
+'use network counters': function(nics) {
+    return nics()
 },
 
-'more free text': function() {
-    return 4
+'use tcp and udp state tables': function(tcp, udp) {
+    return {
+        tcp: tcp,
+        udp: udp
+    }
 }

@@ -1,20 +1,29 @@
 
 before:
 
-    all: -> 
+    all: ->
 
-        console.log 'beforeAll'
-        console.log platform: process.platform
-        console.log platform: process.arch
-        console.log()
+        #
+        # tag modules with names that cannot be injected directly
+        # 
+
+        tag 
+
+            nics: require 'vital-linux-net-dev'
+            tcp:  require 'vital-linux-net-tcp'
+            udp:  require 'vital-linux-net-udp'
+
 
     each: -> console.log '\nbeforeEach'
 
 
-'some free text': -> 
-    net = require 'vital-linux-net-dev'
-    net()
+'use network counters': (nics) -> 
+
+    nics: nics()
 
 
-'more free text': -> 4
+'use tcp and udp state tables': (tcp, udp) -> 
+
+    tcp: tcp
+    udp: udp
     
