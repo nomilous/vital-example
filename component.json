@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "nomilous/vital-linux-net-dev": "*",
+    "nomilous/vital-linux-net-nics": "*",
     "nomilous/vital-linux-net-tcp": "*",
     "nomilous/vital-linux-net-udp": "*"
   },

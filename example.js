@@ -3,7 +3,7 @@ before: {
         
         tag({
 
-            nics: require('vital-linux-net-dev'),
+            nics: require('vital-linux-net-nics'),
             tcp:  require('vital-linux-net-tcp'), 
             udp:  require('vital-linux-net-udp')
 
