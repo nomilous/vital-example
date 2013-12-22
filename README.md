@@ -15,6 +15,6 @@ git seed clone / git seed pull
 component install -f  # force to get latest
 
 
-node_modules/vital/bin/vital -f example
+node_modules/vital/bin/vital -f example.coffee
 
 ```
