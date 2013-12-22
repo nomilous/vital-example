@@ -14,18 +14,22 @@ before:
             udp:  require 'vital-linux-net-udp'
 
 
-    each: -> console.log '\nbeforeEach'
+    # each: -> console.log '\nbeforeEach'
+
 
 
 'use network counters': (nics) -> 
 
-    console.log nics
+    console.log nics: nics()
 
-    nics: nics()
+    #
+    # TODO: backgrounded resolver is not being called
+    #       or something, 
+    #       (second function is not running)...
+    #
 
 
 'use tcp and udp state tables': (tcp, udp) -> 
 
-    tcp: tcp
-    udp: udp
-    
+    console.log tcp: tcp, udp: udp
+        
