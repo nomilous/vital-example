@@ -12,9 +12,9 @@ before:
 
 
 'some free text': -> 
-    net = require 'ubuntu-net-dev'
+    net = require 'vital-linux-net-dev'
     net()
 
 
 'more free text': -> 4
-
+    
