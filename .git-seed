@@ -15,7 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/vital.git",
       "HEAD": "refs/heads/develop",
-      "version": "b608344ed0d3e1c9ef313ee4dc6c20004dc7e031"
+      "version": "6074cb2bfa1010f6445ab8a84a01b493f702180e"
     },
     {
       "root": false,
@@ -23,7 +23,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/ipso.git",
       "HEAD": "refs/heads/develop",
-      "version": "6e6a99406d50f383e0941dbbba47cdfcf50ffd24"
+      "version": "a28660e3d07a2efef6a0b675ed798f4c8c92b48c"
     }
   ]
 }
