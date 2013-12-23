@@ -23,7 +23,7 @@ before:
 
     #
     # pending per action flow control
-    # pending per action repeat interval control
+    # pending per action repeat interval control 
     # pending feedback mechanism (can perhaps be userdefined)
     # 
 
