@@ -1,27 +1,17 @@
 before: {
-    all: function() {
-        
-        tag({
-
-            nics: require('vital-linux-net-nics'),
-            tcp:  require('vital-linux-net-tcp'), 
-            udp:  require('vital-linux-net-udp')
-
-        });
-
-    },
-    each: function() {
-        console.log('\nbeforeEach');
-    },
+    all: function() {},
+    each: function() {},
 },
 
-'use network counters': function(nics) {
-    return nics()
+'use network counters': function(ifStats) {
+    console.log({
+        ifStats: ifStats()
+    });
 },
 
-'use tcp and udp state tables': function(tcp, udp) {
-    return {
-        tcp: tcp,
-        udp: udp
-    }
+'use tcp and udp state tables': function(tcpStats, udpStats) {
+    console.log({
+        tcpStats: tcpStats(),
+        udpStats: udpStats()
+    });
 }

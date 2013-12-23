@@ -5,9 +5,9 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "nomilous/vital-linux-net-nics": "*",
-    "nomilous/vital-linux-net-tcp": "*",
-    "nomilous/vital-linux-net-udp": "*"
+    "nomilous/linux-if-stats": "*",
+    "nomilous/linux-tcp-stats": "*",
+    "nomilous/linux-udp-stats": "*"
   },
   "development": {},
   "license": "MIT"

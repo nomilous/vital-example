@@ -2,27 +2,24 @@
 before:
 
     all: ->
-
-        #
-        # tag modules with names that cannot be injected directly
-        # 
-
-        tag 
-
-            nics: require 'vital-linux-net-nics'
-            tcp:  -> # require 'vital-linux-net-tcp'
-            udp:  -> # require 'vital-linux-net-udp'
+    each: -> 
 
 
-    each: -> console.log '\nbeforeEach'
+#
+# component.json defines inject.alias
+# components injected accordingly
+#
 
+'use network counters': (ifStats) -> 
 
+    console.log 
 
-'use network counters': (nics) -> 
+        ifStats: ifStats()
 
-    console.log nics: nics
+'use tcp and udp state tables': (tcpStats, udpStats) -> 
 
-'use tcp and udp state tables': (tcp, udp) -> 
+    console.log 
 
-    console.log tcp: tcp, udp: udp
-        
+        tcpStats: tcpStats()
+        udpStats: udpStats()
+    
