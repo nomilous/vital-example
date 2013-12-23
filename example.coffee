@@ -1,7 +1,9 @@
 
 before:
 
-    all: (done) -> 
+    all: (done, ifStats) -> 
+
+        ifStats.start()
 
         #
         # pending flow control
@@ -19,7 +21,7 @@ before:
 # components injected accordingly
 #
 
-'action / assertion title string': (done, ifStats) -> 
+'action / assertion title string': (ifStats) -> 
 
     #
     # pending per action flow control
@@ -27,14 +29,15 @@ before:
     # pending feedback mechanism (can perhaps be userdefined)
     # 
 
-    console.log 
+    try console.log ifStats.current()
+    catch error
+        console.log error
 
-        ifStats: ifStats()
 
-'use tcp and udp state tables': (tcpStats, udpStats) -> 
+# 'use tcp and udp state tables': (tcpStats, udpStats) -> 
 
-    console.log 
+#     console.log 
 
-        tcpStats: tcpStats()
-        udpStats: udpStats()
+#         tcpStats: tcpStats()
+#         udpStats: udpStats()
     
