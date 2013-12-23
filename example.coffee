@@ -1,7 +1,7 @@
 
 before:
 
-    all: (done, ifStats) -> 
+    all: (ifStats) -> 
 
         ifStats.start()
 
@@ -29,7 +29,16 @@ before:
     # pending feedback mechanism (can perhaps be userdefined)
     # 
 
-    try console.log ifStats.current()
+    try 
+
+        stats = ifStats.current()
+
+        console.log 
+
+            rxBytes: stats.eth0.rxBytes
+            yxBytes: stats.eth0.txBytes
+    
+
     catch error
         console.log error
 
