@@ -36,7 +36,7 @@ before:
         console.log 
 
             rxBytes: stats.eth0.rxBytes
-            yxBytes: stats.eth0.txBytes
+            txBytes: stats.eth0.txBytes
     
 
     catch error
