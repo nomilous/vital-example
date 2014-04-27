@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "repos": [
+    {
+      "root": true,
+      "workDir": ".",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/vital-example.git",
+      "HEAD": "refs/heads/develop",
+      "version": "ROOT_REPO_REF"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/vital",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/vital.git",
+      "HEAD": "refs/heads/develop",
+      "version": "02ae1e813c23306b9cdf5c5438b7ad369a811b5a"
+    }
+  ]
+}

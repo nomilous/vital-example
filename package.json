@@ -16,7 +16,7 @@
     "url": "https://github.com/nomilous/vital-example/issues"
   },
   "dependencies": {
-    "vital": "0.0.2",
+    "vital": "0.0.3",
     "linux-if-stats": "0.0.2",
     "vertex": "0.0.5"
   }
