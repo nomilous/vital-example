@@ -1,9 +1,9 @@
 
 before:
 
-    all: (ifStats) -> 
+    all: (linuxIfStats) -> 
 
-        ifStats.start()
+        linuxIfStats.start()
 
         #
         # pending flow control
@@ -21,7 +21,7 @@ before:
 # components injected accordingly
 #
 
-'action / assertion title string': (ifStats) -> 
+'action / assertion title string': (linuxIfStats) -> 
 
     #
     # pending per action flow control
@@ -31,7 +31,7 @@ before:
 
     try 
 
-        stats = ifStats.current()
+        stats = linuxIfStats.current()
 
         console.log 
 

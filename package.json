@@ -16,6 +16,7 @@
     "url": "https://github.com/nomilous/vital-example/issues"
   },
   "dependencies": {
-    "vital": "0.0.1"
+    "vital": "0.0.2",
+    "linux-if-stats": "0.0.1"
   }
 }
