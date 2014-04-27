@@ -1,7 +1,7 @@
 
 before:
 
-    all: (linuxIfStats) -> 
+    all: (vertex, linuxIfStats) -> 
 
         linuxIfStats.start()
 
@@ -12,14 +12,26 @@ before:
         # allows wait for uplink to knowledgebase/config before proceeding
         #
 
-        # setTimeout done, 2000
-    
-    each: -> 
 
-#
-# component.json defines inject.alias
-# components injected accordingly
-#
+        #
+        # start a vertex to serve exported functions to the web
+        #
+
+        require('vertex').create 
+
+            www:
+                listen: port: 3000
+                routes: 
+
+                    #
+                    # curl localhost:3000/if-stats/latest
+                    # 
+
+                    'if-stats': linuxIfStats
+
+    each: ->
+
+
 
 'action / assertion title string': (linuxIfStats) -> 
 
@@ -31,12 +43,12 @@ before:
 
     try 
 
-        stats = linuxIfStats.current()
+        stats = linuxIfStats.latest()
 
         console.log 
 
-            rxBytes: stats.eth0.rxBytes
-            txBytes: stats.eth0.txBytes
+            rxBytes:      stats.counters.eth0.rxBytes
+            txBytes:      stats.counters.eth0.txBytes
     
 
     catch error

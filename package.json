@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "vital": "0.0.2",
-    "linux-if-stats": "0.0.1"
+    "linux-if-stats": "0.0.1",
+    "vertex": "0.0.5"
   }
 }
