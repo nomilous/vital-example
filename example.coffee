@@ -17,7 +17,7 @@ before:
         # start a vertex to serve exported functions to the web
         #
 
-        require('vertex').create 
+        vertex.create
 
             www:
                 listen: port: 3000
